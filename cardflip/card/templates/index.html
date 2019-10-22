@@ -1,0 +1,36 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+  </head>
+  <body>
+    <div class="headt">Welcome To FlipCard Game</div>
+<div class="login-box">
+  <form method="POST">{%csrf_token%}
+    <h1>Signup</h1>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="Username" id="Username" placeholder="Username" required>
+      </div>
+    <div class="textbox">
+        <i class="fas fa-envelope-square"></i>
+      <input type="text" name="Email" id="Email" placeholder="Email" required>
+    </div>
+    <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" name="Password" id="Password" placeholder="Password" required>
+    </div>
+    <div class="col-md-6 form-group">
+      <input type="checkbox" name="terms" value="conditions" required> I Accept Tearms And Condition<br>
+    </div>
+    <input type="submit" class="btn" value="Sign up">
+    <div class="login">
+    <a class="login" href="#">Already Registered Login</a>
+    </div>
+  </form>
+</div>
+  </body>
+</html>
